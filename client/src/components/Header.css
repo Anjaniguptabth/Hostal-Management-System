@@ -1,0 +1,224 @@
+/* Header Container */
+.header {
+  display:flex;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between;
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Top Links Section */
+.top-links {
+  position: fixed; /* Fixed position for larger screens */
+  top: 0; /* Align at the top of the page */
+  right: 0; /* Align to the right side */
+  background-color:whitesmoke; /* Black background */
+  color:#f8f9fa; /* White text color */
+  padding: 5px 20px; /* Adjust padding */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: bold; /* Make the text bold */
+}
+
+.top-links a {
+  text-decoration: none;
+  color: #fff; /* White color for links */
+}
+
+.top-links a:hover {
+  color:black; /* Highlight color for hover */
+}
+
+/* Highlighted "Admissions" Link */
+.top-links .highlight-link {
+  background-color:orange; /* Yellow background */
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.top-links .highlight-link3 {
+  background-color:white; /* Yellow background */
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.top-links .highlight-link2 {
+  color: white;
+  background-color:green; /* Yellow background */
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+
+/* Logo and Scrolling Text */
+.header-left {
+  display: flex;
+  flex-direction: column; /* Stack logo and scrolling text */
+  align-items: center; /* Vertically align logo and text */
+  flex-shrink: 0; /* Prevent the logo section from shrinking */
+}
+
+.logo {
+  width: 100%;
+  height: 100px;
+}
+
+.scroll-text {
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+
+.scroll-text span {
+  display: inline-block;
+  animation: scroll 8s linear infinite;
+  white-space: nowrap; /* Prevent text from breaking into a new line */
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navigation Menu */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push header-right to the right of header-left */
+  gap: 20px; /* Space between menu items */
+}
+
+
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold; /* Make the text bold */
+}
+
+.menu-items li a:hover {
+  color:black; /* Hover effect for menu items */
+  font-weight: bolder;
+}
+
+/* Search Icon */
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Search Box */
+.search-box {
+  position: absolute;
+  top: 100%; /* Align below the header */
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.search-box input {
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-box button {
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Position Top Links Below the Header */
+  .top-links {
+    position: relative; /* Allow links to move below the header */
+    width: 100%; /* Make the links full-width */
+    display: block; /* Stack the links vertically */
+    padding: 10px 0;
+    background: white;
+  }
+
+  .top-links a {
+    display: block; /* Stack links vertically */
+    padding: 10px 0px;
+
+  }
+
+  .header-left {
+    margin-bottom: 20px; /* Add some space between logo and top links */
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 20px; /* Adjust spacing for smaller screens */
+  }
+
+  /* Adjust Menu Items on Small Screens */
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust based on header height */
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 1000;
+    gap: 5px;
+  }
+
+  .menu-items.show-menu {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block; /* Show menu toggle in mobile view */
+  }
+
+  .menu-items li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-items {
+    display: flex; /* Show menu items in larger screens */
+  }
+
+  .menu-button {
+    display: none; /* Hide menu button in larger screens */
+  }
+}

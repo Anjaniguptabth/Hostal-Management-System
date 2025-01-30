@@ -1,0 +1,279 @@
+.contact-container {
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width */
+  margin: auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensure padding does not overflow */
+}
+
+.form-card h1 {
+  color: orange;
+  font: 2.5rem sans-serif;
+  font-weight: bold;
+}
+
+.form-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Animation for the form card */
+  
+  /* Center everything inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Make sure the form card is fully responsive */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Animation for all cards */
+}
+
+.card h3 {
+  color: orange;
+  font: 2.5rem sans-serif;
+  font-weight: bold;
+}
+
+.card p {
+  color: #555;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout for the map and address card */
+.contact-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to stack on smaller screens */
+  gap: 30px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in-out; /* Add fade-in to contact details */
+}
+
+/* For large screens, keep map and address cards in the same row */
+@media (min-width: 769px) {
+  .map-container, .address-card {
+    width: 48%; /* 48% width so they can fit in the same row with a gap */
+    animation: fadeIn 1s ease-in-out; /* Animation for the map and address card */
+  }
+}
+
+/* For small screens (under 768px), stack the map and address cards */
+@media (max-width: 768px) {
+  .map-container, .address-card {
+    width: 100%; /* Take full width on small screens */
+    animation: fadeIn 1s ease-in-out; /* Animation for the map and address card */
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width */
+  margin: auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Ensure padding does not overflow */
+}
+
+.form-card h1 {
+  color: orange;
+  font: 2.5rem sans-serif;
+  font-weight: bold;
+}
+
+.form-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Animation for the form card */
+  
+  /* Center everything inside the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Make sure the form card is fully responsive */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input, .input-small, .captcha-input, .submit-btn, .input-z, .input-small2 {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  width: 100%; /* Ensure input fields do not overflow */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.input:focus, .input-small:focus, .captcha-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-small {
+  width: 100%; /* Make input small take full width on small screens */
+}
+
+.input-small2 {
+  width: 100%; /* Make input small2 take full width on small screens */
+}
+
+.input {
+  width: 100%; /* Make input take full width on small screens */
+}
+
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.captcha {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  background: #eef2f7;
+  border-radius: 8px;
+  flex: none;
+  display: inline-block;
+}
+
+.captcha-input {
+  width: 100%; /* Make captcha input take full width on small screens */
+}
+
+.refresh-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: green;
+  transition: transform 0.3s ease;
+}
+
+.refresh-btn:hover {
+  transform: rotate(360deg);
+}
+
+.verification-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-btn {
+  background: green;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%; /* Make submit button responsive */
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 14px 20px;
+  margin-left: 0; /* No left margin for better responsiveness */
+}
+
+.submit-btn:hover {
+  background: darkgreen;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(2px);
+}
+
+/* Layout for the map and address card */
+.contact-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to stack on smaller screens */
+  gap: 30px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in-out; /* Add fade-in to contact details */
+}
+
+/* For large screens, keep map and address cards in the same row */
+@media (min-width: 769px) {
+  .map-container, .address-card {
+    width: 48%; /* 48% width so they can fit in the same row with a gap */
+    animation: fadeIn 1s ease-in-out; /* Animation for the map and address card */
+  }
+}
+
+/* For small screens (under 768px), stack the map and address cards */
+@media (max-width: 768px) {
+  .map-container, .address-card {
+    width: 100%; /* Take full width on small screens */
+    animation: fadeIn 1s ease-in-out; /* Animation for the map and address card */
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

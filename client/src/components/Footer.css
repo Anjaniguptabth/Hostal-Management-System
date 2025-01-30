@@ -1,0 +1,42 @@
+/* Footer container styling */
+.footer-container {
+  background-color: #282c34; /* Darker background for contrast */
+  padding: 15px;
+  text-align: center;
+  color: #ffffff; /* White text color for better readability */
+  position: relative;
+  width: 100%; /* Ensures the footer takes up full width of the page */
+  max-width: 100%; /* Prevents the footer from exceeding the viewport width */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+  margin: 0 auto; /* Centers it within the available space */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Footer text styling */
+.footer-container p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 12px; /* Slightly smaller padding on medium screens */
+  }
+
+  .footer-container p {
+    font-size: 13px; /* Adjust font size for medium devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px; /* Smaller padding for small devices */
+  }
+
+  .footer-container p {
+    font-size: 12px; /* Adjust font size for small devices */
+  }
+}
